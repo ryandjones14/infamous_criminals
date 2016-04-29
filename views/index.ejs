@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- ADD ng-app to the html tag -->
+<html lang="en" ng-app="InfamousCriminals">
+<head>
+  <meta charset="UTF-8">
+  <title>Infamous Criminals™</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+  <script src="/javascripts/app.js"></script>
+  <script src="/javascripts/criminalsController.js"></script>
+</head>
+
+<body>
+
+  <h1>Infamous Criminals</h1>
+
+  <nav class="tabs">
+    <a ui-sref-active="active" ui-sref="home">Home</a>
+    <a ui-sref-active="active" ui-sref="new">New Criminal</a>
+    <a ui-sref-active="active" ui-sref="about">About</a>
+  </nav>
+
+
+  <!-- ADD ng-controller to the section tag -->
+  <section ng-controller="CriminalsController as crimCtrl">
+
+    <div ui-view></div>
+
+
+  </section>
+
+</body>
+</html>

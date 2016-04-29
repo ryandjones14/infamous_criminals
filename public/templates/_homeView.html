@@ -1,0 +1,6 @@
+<ul id="criminals">
+  <li ng-repeat="criminal in crimCtrl.criminals" data-id="{{criminal._id}}">
+    <strong ng-click="crimCtrl.getCrim(criminal)"><a ui-sref-active="active" ui-sref="edit">{{criminal.name}}</a></strong> <em>{{criminal.location}}</em> <span class="status {{criminal.status}}">{{criminal.status}}</span>
+      <button class="delete" ng-click="crimCtrl.deleteCrim(criminal)">X</button>
+  </li>
+</ul>

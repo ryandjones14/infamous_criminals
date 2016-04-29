@@ -1,0 +1,25 @@
+<!-- ADD ng-submit to the form -->
+<form ng-submit="crimCtrl.addCrim()">
+  <div>
+    <label for="newCriminal-name">Name:</label>
+    <input type="text" id="newCriminal-name" name="name" ng-model="crimCtrl.newCriminal.name" placeholder="Prof. Moriarty">
+  </div>
+  <div>
+    <label for="newCriminal-location">Location:</label>
+    <input type="text" id="newCriminal-location" name="location" ng-model="crimCtrl.newCriminal.location" placeholder="Reichenbach Falls, CH">
+  </div>
+  <div>
+    <label for="newCriminal-status">Status:</label>
+
+    <!-- ADD ng-model to the select tag -->
+    <select id="newCriminal-status" name="status" ng-model="crimCtrl.newCriminal.status">
+      <option value="" disabled>-- Please Select One</option>
+      <option value="Alive">Alive</option>
+      <option value="Dead">Dead</option>
+      <option value="Unknown" selected>Unknown</option>
+    </select>
+  </div>
+  <div>
+    <input type="submit" value="Add Criminal">
+  </div>
+</form>

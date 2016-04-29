@@ -1,0 +1,28 @@
+<!-- ADD ng-submit to the form -->
+<form id="newCriminal" ng-submit="crimCtrl.editCrim(editCriminal)">
+  <div>
+    <input type="hidden" id="editCriminal-id" name="id" ng-model="crimCtrl.editCriminal._id" value="{{editCriminal._id}}">
+  </div>
+  <div>
+    <label for="editCriminal-name">Name:</label>
+    <input type="text" id="editCriminal-name" name="name" ng-model="crimCtrl.editCriminal.name" value="{{editCriminal.name}}">
+  </div>
+  <div>
+    <label for="editCriminal-location">Location:</label>
+    <input type="text" id="editCriminal-location" name="location" ng-model="crimCtrl.editCriminal.location" value="{{editCriminal.location}}">
+  </div>
+  <div>
+    <label for="editCriminal-status">Status:</label>
+
+    <!-- ADD ng-model to the select tag -->
+    <select id="editCriminal-status" name="status" ng-model="crimCtrl.editCriminal.status" value="{{editCriminal.status}}">
+      <option value="" disabled>-- Please Select One</option>
+      <option value="Alive">Alive</option>
+      <option value="Dead">Dead</option>
+      <option value="Unknown" selected>Unknown</option>
+    </select>
+  </div>
+  <div>
+    <input type="submit" value="Edit Criminal">
+  </div>
+</form>
